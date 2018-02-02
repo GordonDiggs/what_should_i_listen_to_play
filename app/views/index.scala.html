@@ -1,5 +1,11 @@
-@()
+@(item: Item)
 
-@main("Welcome to Play") {
-  <h1>Welcome to Play!</h1>
+@main("What should I listen to?") {
+  <div>
+    You should listen to
+    <em>@item.title</em>
+    by <strong>@item.artist</strong>
+    on @item.label.
+    It is a @item.format record released in @item.year.
+  </div>
 }

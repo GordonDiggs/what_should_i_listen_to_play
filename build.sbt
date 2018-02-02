@@ -9,6 +9,7 @@ scalaVersion := "2.12.3"
 
 libraryDependencies += guice
 libraryDependencies += "org.scalatestplus.play" %% "scalatestplus-play" % "3.1.2" % Test
+libraryDependencies +=  "org.scalaj" %% "scalaj-http" % "2.3.0"
 
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.gordondiggs.controllers._"

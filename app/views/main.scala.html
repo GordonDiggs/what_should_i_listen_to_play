@@ -4,15 +4,28 @@
  * two arguments, a `String` for the title of the page and an `Html`
  * object to insert into the body of the page.
  *@
-@(title: String)(content: Html)
+@(title: String, backgroundURL: String)(content: Html)
 
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        @* Here's where we render the page title `String`. *@
         <title>@title</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+
+    <style type='text/css'>
+      html { height: 100%; }
+      body { display: -webkit-box; display: -webkit-flex;
+             -webkit-align-items: center;
+             -webkit-box-align: center; -moz-box-align: center;
+             -webkit-box-pack: center; -webkit-justify-content: center;
+             margin: 0; height: 100%; width: 100%;
+             background: url(@backgroundURL) no-repeat center center fixed;
+             background-size: cover; background-color: black;
+             color: black; font-size: 36px; text-align:center; font-family: sans-serif; }
+      div { width: 500px; margin: 0 auto; margin-top: 20px; padding: 25px; opacity: 0.6; background: white; border-radius: 10px; }
+      em, strong { color: red; }
+    </style>
 
     </head>
     <body>
